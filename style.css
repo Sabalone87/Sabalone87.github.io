@@ -1,0 +1,238 @@
+/* default */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+
+/* navbar */
+
+nav {
+  font-size: 1rem;
+  box-shadow: -5px 0 gray;
+  position: relative;
+}
+.navbar-pos {
+  position: relative;
+  left: 300px;
+}
+.nav-item {
+  padding: 0 1rem;
+}
+.nav-line {
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+a.nav-link.active span::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+a.nav-link span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+a.nav-link:hover span {
+  color: white;
+}
+a.nav-link:hover span::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* home */
+#home {
+  height: 700px;
+}
+.contact-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: white;
+  background-color: black;
+  width: 2.5rem;
+  height: 6.5rem;
+  position: fixed;
+  bottom: 50%;
+}
+.zoom-img {
+  width: 500px;
+  height: 500px;
+  border: solid 1px black;
+  position: relative;
+  left: 300px;
+  top: 100px;
+}
+.deco-area {
+  height: 360px;
+  width: 230px;
+  position: absolute;
+  bottom: 0;
+  right: -230px;
+  background-color: #f8f5f1;
+}
+.name-about {
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  right: -237px;
+  top: -35px;
+  display: flex;
+  flex-direction: column;
+}
+.name-text {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.name-icon {
+  cursor: pointer;
+  margin-left: 35px;
+  font-size: 1.3rem;
+}
+.fab {
+  padding: 0 5px;
+}
+.about-link {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 3rem;
+  position: relative;
+  left: 50px;
+}
+.deco-dot {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.deco-line {
+  background-color: black;
+  width: 100px;
+  height: 2px;
+}
+.aboutBtn {
+  border-radius: 0px;
+  border: solid 2.5px black;
+}
+/* about */
+#about {
+  height: 500px;
+}
+.about-title {
+  font-size: 6rem;
+  font-weight: bold;
+  position: relative;
+  left: 240px;
+}
+.about-text {
+  border: solid 1px black;
+  width: 450px;
+  height: 200px;
+  position: relative;
+  left: 300px;
+}
+.picrun {
+  display: flex;
+  position: relative;
+}
+.deco-bar {
+  background-color: black;
+  height: 15px;
+  width: 350px;
+  position: relative;
+  left: 500px;
+}
+
+.carousel {
+  width: 600px;
+  height: 350px;
+  position: absolute;
+  left: 850px;
+  top: -310px;
+}
+.carousel-indicators {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  left: -170px;
+  bottom: -20px;
+}
+.carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: gray !important;
+  border-radius: 100%;
+}
+
+/* project */
+
+#project {
+  height: 700px;
+  display: flex;
+}
+.type-frame {
+  width: 20%;
+  height: 600px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.program-type {
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin: 20px 0;
+}
+.program-type:hover {
+  cursor: pointer;
+}
+.project-frame {
+  width: 80%;
+  height: 600px;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-title {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  padding: 0 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-bottom: solid 6px black;
+}
+.project-nav {
+  margin-top: 25px;
+}
+
+.exibition {
+  display: flex;
+}
+
+.ex-project {
+  margin: 0px 10px;
+  margin-top: 100px;
+}
