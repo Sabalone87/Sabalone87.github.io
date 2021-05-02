@@ -170,6 +170,7 @@
         </div>
       </div>
     </section>
+
     <!-- Project -->
     <section id="project">
       <div class="type-frame">
@@ -183,26 +184,114 @@
           <span id="nav-tag">HTML / CSS / JAVASCRIPT</span>
         </div>
         <div class="exibition">
-          <img
-            src="https://picsum.photos/id/237/330/250"
-            class="ex-project"
-            alt="..."
-          />
-          <img
-            src="https://picsum.photos/id/237/330/250"
-            class="ex-project"
-            alt="..."
-          />
-          <img
-            src="https://picsum.photos/id/237/330/250"
-            class="ex-project"
-            alt="..."
-          />
+          <div id="project1" class="ex-project">
+            <div id="project1-cover"></div>
+            <span id="project1-text">MusicPlayer</span>
+            <a
+              id="project1-link"
+              href="https://github.com/Sabalone87/musicPlayer"
+              target="_blank"
+              ><button
+                type="button"
+                id="project1-btn"
+                class="btn btn-outline-dark"
+              >
+                GO > >
+              </button></a
+            >
+          </div>
+          <div id="project2" class="ex-project">
+            <div id="project2-cover"></div>
+            <span id="project2-text">MyWeb</span>
+            <a id="project2-link" href="./index.html" target="_blank"
+              ><button
+                type="button"
+                id="project2-btn"
+                class="btn btn-outline-dark"
+              >
+                GO > >
+              </button></a
+            >
+          </div>
+          <div id="project3" class="ex-project">
+            <div id="project3-cover"></div>
+            <span id="project3-text">Comming soon</span>
+            <a id="project3-link" href="#project"
+              ><button
+                type="button"
+                id="project3-btn"
+                class="btn btn-outline-dark"
+              >
+                GO > >
+              </button></a
+            >
+          </div>
         </div>
       </div>
     </section>
+
     <!-- CONTACT -->
-    <section id="contact"></section>
+    <section id="contact">
+      <div class="trapezoid"></div>
+      <div class="contact-title">
+        <span class="contact-c">C O N T A C T</span
+        ><span class="contact-m">M E</span>
+      </div>
+      <div class="contact-frame">
+        <div class="contact-info">
+          <i class="fas fa-map-marker-alt"></i> New Taipei City 220, Taiwan
+        </div>
+        <div class="contact-info">
+          <i class="fas fa-phone"></i> +886 987 058 069
+        </div>
+        <div class="contact-info">
+          <i class="fas fa-envelope"></i> b06501012@gmail.com
+        </div>
+      </div>
+      <div class="contactform">
+        <form id="form" method="POST">
+          <div class="form-group">
+            <label for="username">Your Name</label>
+            <input
+              type="name"
+              class="form-control"
+              id="username"
+              aria-describedby="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="useremail">Your Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="useremail"
+              aria-describedby="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="usersubject">Subject</label>
+            <input
+              type="subject"
+              class="form-control"
+              id="usersubject"
+              aria-describedby="subject"
+            />
+          </div>
+          <div class="form-group">
+            <label for="usermsg">Message</label>
+            <textarea
+              class="form-control"
+              id="usermsg"
+              row="5"
+            ></textarea>
+          </div>
+          <button type="submit" id="submit" class="btn btn-dark formBtn">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer></footer>
 
     <!-- bootstrap js -->
     <script
