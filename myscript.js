@@ -1,11 +1,34 @@
-// navbar
+// ** navbar **
 // item
 $(".nav-line").on("click", function () {
   $(".navbar-nav").find("a.active").removeClass("active");
   $(this).parent("a").addClass("active");
 });
+//scroll
+$(window).scroll(function () {
+  if ($(this).scrollTop() < $('section[data-anchor="home"]').offset().top) {
+    $(".navbar-nav").find("a.active").removeClass("active");
+  }
 
-// home
+  if ($(this).scrollTop() >= $('section[data-anchor="home"]').offset().top) {
+    $(".navbar-nav").find("a.active").removeClass("active");
+    $("li a:eq(0)").addClass("active");
+  }
+  if ($(this).scrollTop() >= $('section[data-anchor="about"]').offset().top) {
+    $(".navbar-nav").find("a.active").removeClass("active");
+    $("li a:eq(1)").addClass("active");
+  }
+  if ($(this).scrollTop() >= $('section[data-anchor="project"]').offset().top) {
+    $(".navbar-nav").find("a.active").removeClass("active");
+    $("li a:eq(2)").addClass("active");
+  }
+  if ($(this).scrollTop() >= $('section[data-anchor="contact"]').offset().top) {
+    $(".navbar-nav").find("a.active").removeClass("active");
+    $("li a:eq(3)").addClass("active");
+  }
+});
+
+// ** home **
 // icon
 $(".fa-facebook-f").on("click", function () {
   window.open("https://www.facebook.com/profile.php?id=100002155525509");
@@ -17,7 +40,9 @@ $(".fa-line").on("click", function () {
   window.open("https://line.me/ti/p/beF6mRHNPB");
 });
 
-//project
+// ** project **
+
+// type select
 $("#htmlcss").on("click", function () {
   $("#nav-tag").text("HTML / CSS / JAVASCRIPT");
   $("#project1").css("background-image", "url(./img/musicPlayer.png)");
@@ -32,6 +57,8 @@ $("#htmlcss").on("click", function () {
   });
   $("#project2-link").attr({ href: "./index.html", target: "_blank" });
   $("#project3-link").attr({ href: "#project", target: "_self" });
+  $(".type-frame").find("div.active").removeClass("active");
+  $(this).parent(".program-control").addClass("active");
 });
 $("#react").on("click", function () {
   $("#nav-tag").text("REACT.JS");
@@ -47,6 +74,8 @@ $("#react").on("click", function () {
   });
   $("#project2-link").attr({ href: "#project", target: "_self" });
   $("#project3-link").attr({ href: "#project", target: "_self" });
+  $(".type-frame").find("div.active").removeClass("active");
+  $(this).parent(".program-control").addClass("active");
 });
 $("#node").on("click", function () {
   $("#nav-tag").text("NODE.JS");
@@ -59,13 +88,16 @@ $("#node").on("click", function () {
   $("#project1-link").attr({ href: "#project", target: "_self" });
   $("#project2-link").attr({ href: "#project", target: "_self" });
   $("#project3-link").attr({ href: "#project", target: "_self" });
+  $(".type-frame").find("div.active").removeClass("active");
+  $(this).parent(".program-control").addClass("active");
 });
 
+// project event
 $("#project1").hover(
   function () {
     $("#project1-text").animate({ opacity: 1 }, 500);
     $("#project1-btn").animate({ opacity: 1 }, 500);
-    $("#project1-cover").animate({ opacity: 0.3 }, 500);
+    $("#project1-cover").animate({ opacity: 0.9 }, 500);
   },
   function () {
     $("#project1-text").animate({ opacity: 0 }, 100);
@@ -77,7 +109,7 @@ $("#project2").hover(
   function () {
     $("#project2-text").animate({ opacity: 1 }, 100);
     $("#project2-btn").animate({ opacity: 1 }, 100);
-    $("#project2-cover").animate({ opacity: 0.3 }, 100);
+    $("#project2-cover").animate({ opacity: 0.9 }, 100);
   },
   function () {
     $("#project2-text").animate({ opacity: 0 }, 100);
@@ -89,7 +121,7 @@ $("#project3").hover(
   function () {
     $("#project3-text").animate({ opacity: 1 }, 500);
     $("#project3-btn").animate({ opacity: 1 }, 500);
-    $("#project3-cover").animate({ opacity: 0.3 }, 500);
+    $("#project3-cover").animate({ opacity: 0.9 }, 500);
   },
   function () {
     $("#project3-text").animate({ opacity: 0 }, 100);
@@ -98,11 +130,29 @@ $("#project3").hover(
   }
 );
 
-//contact
+// ** contact **
 
-let form = $("#form"),
-  name = $("#username"),
-  email = $("#useremail"),
-  subject = $("#usersubject"),
-  msg = $("#usermsg"),
-  submit = $("#submit");
+//form
+function sendMail(e) {
+  let username = $("#username").val(),
+    email = $("#useremail").val(),
+    usersubject = $("#usersubject").val(),
+    msg = $("#usermsg").val(),
+    userbody =
+      `My name is: ` +
+      username +
+      "%0a%0d" +
+      `My Email is: ` +
+      email +
+      "%0a%0d" +
+      `Msg:` +
+      "%0a%0d" +
+      msg;
+  window.open(
+    "mailto:b06501012@gmail.com?subject=" + usersubject + "&body=" + userbody
+  );
+}
+let submit = $("#submit");
+submit.on("click", (e) => {
+  sendMail(e);
+});

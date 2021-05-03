@@ -50,22 +50,22 @@
         <div class="collapse navbar-collapse" id="navbarList">
           <ul class="navbar-nav nav navbar-pos">
             <li class="nav-item">
-              <a href="#home" class="nav-link active"
+              <a href="#home" data-scroll="home" class="nav-link active"
                 ><span class="nav-line">Home</span></a
               >
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link"
+              <a href="#about" data-scroll="about" class="nav-link"
                 ><span class="nav-line">About</span></a
               >
             </li>
             <li class="nav-item">
-              <a href="#project" class="nav-link"
+              <a href="#project" data-scroll="project" class="nav-link"
                 ><span class="nav-line">Projects</span></a
               >
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link"
+              <a href="#contact" data-scroll="contact" class="nav-link"
                 ><span class="nav-line">Contact</span></a
               >
             </li>
@@ -74,40 +74,44 @@
       </div>
     </nav>
     <!-- HOME -->
-    <section id="home">
+    <section id="home" data-anchor="home">
       <div>
         <a href="#contact"
           ><span class="contact-bar">&nbsp&nbspContactMe</span></a
         >
       </div>
-      <div class="zoom-img">
-        <div class="deco-area">
-          <div class="name-about">
-            <div class="name-text">LIU</div>
-            <div class="name-text">YU</div>
-            <div class="name-text">
-              CHAO
-              <div class="name-icon">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-line"></i>
+      <div class="container">
+        <div class="zoom-img">
+          <img id="mypic" src="./img/mypic.jpg" alt="" />
+          <div class="deco-area">
+            <div class="name-about">
+              <div class="name-text">LIU</div>
+              <div class="name-text">YU</div>
+              <div class="name-text">
+                CHAO
+                <div class="name-icon">
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-line"></i>
+                </div>
               </div>
-            </div>
-            <div class="about-link">
-              <div class="deco-dot"></div>
-              <div class="deco-line"></div>
-              <a href="#about"
-                ><button type="button" class="btn btn-outline-dark aboutBtn">
-                  ABOUT > >
-                </button></a
-              >
+              <div class="about-link">
+                <div class="deco-dot"></div>
+                <div class="deco-line"></div>
+                <a href="#about"
+                  ><button type="button" class="btn btn-outline-dark aboutBtn">
+                    ABOUT > >
+                  </button></a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- About -->
-    <section id="about">
+    <section id="about" data-anchor="about">
+      <div class="section-blank"></div>
       <div class="about-title">ABOUT ME</div>
       <div class="about-text"></div>
       <div class="picrun">
@@ -143,27 +147,15 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img
-                src="https://picsum.photos/id/237/600/350"
-                class="d-block w-100"
-                alt="..."
-              />
+              <img src="./img/about1.jpg" class="d-block aboutPic" alt="..." />
               <div class="carousel-caption d-none d-md-block"></div>
             </div>
             <div class="carousel-item">
-              <img
-                src="https://picsum.photos/id/217/600/350"
-                class="d-block w-100"
-                alt="..."
-              />
+              <img src="./img/about2.jpg" class="d-block aboutPic" alt="..." />
               <div class="carousel-caption d-none d-md-block"></div>
             </div>
             <div class="carousel-item">
-              <img
-                src="https://picsum.photos/id/227/600/350"
-                class="d-block w-100"
-                alt="..."
-              />
+              <img src="./img/about3.jpg" class="d-block aboutPic" alt="..." />
               <div class="carousel-caption d-none d-md-block"></div>
             </div>
           </div>
@@ -172,123 +164,131 @@
     </section>
 
     <!-- Project -->
-    <section id="project">
-      <div class="type-frame">
-        <div id="htmlcss" class="program-type"></div>
-        <div id="react" class="program-type"></div>
-        <div id="node" class="program-type"></div>
-      </div>
-      <div class="project-frame">
-        <div class="project-title"><span>Project</span></div>
-        <div class="project-nav">
-          <span id="nav-tag">HTML / CSS / JAVASCRIPT</span>
+    <section id="project" data-anchor="project">
+      <div class="section-blank"></div>
+      <div class="project-block">
+        <div class="type-frame">
+          <div class="program-control active">
+            <div id="htmlcss" class="program-type"></div>
+          </div>
+          <div class="program-control">
+            <div id="react" class="program-type"></div>
+          </div>
+          <div class="program-control">
+            <div id="node" class="program-type"></div>
+          </div>
         </div>
-        <div class="exibition">
-          <div id="project1" class="ex-project">
-            <div id="project1-cover"></div>
-            <span id="project1-text">MusicPlayer</span>
-            <a
-              id="project1-link"
-              href="https://github.com/Sabalone87/musicPlayer"
-              target="_blank"
-              ><button
-                type="button"
-                id="project1-btn"
-                class="btn btn-outline-dark"
-              >
-                GO > >
-              </button></a
-            >
+        <div class="project-frame">
+          <div class="project-title"><span>Project</span></div>
+          <div class="project-nav">
+            <span id="nav-tag">HTML / CSS / JAVASCRIPT</span>
           </div>
-          <div id="project2" class="ex-project">
-            <div id="project2-cover"></div>
-            <span id="project2-text">MyWeb</span>
-            <a id="project2-link" href="./index.html" target="_blank"
-              ><button
-                type="button"
-                id="project2-btn"
-                class="btn btn-outline-dark"
+          <div class="exibition">
+            <div id="project1" class="ex-project">
+              <div id="project1-cover"></div>
+              <span id="project1-text">MusicPlayer</span>
+              <a
+                id="project1-link"
+                href="https://github.com/Sabalone87/musicPlayer"
+                target="_blank"
+                ><button
+                  type="button"
+                  id="project1-btn"
+                  class="btn btn-outline-dark"
+                >
+                  GO > >
+                </button></a
               >
-                GO > >
-              </button></a
-            >
-          </div>
-          <div id="project3" class="ex-project">
-            <div id="project3-cover"></div>
-            <span id="project3-text">Comming soon</span>
-            <a id="project3-link" href="#project"
-              ><button
-                type="button"
-                id="project3-btn"
-                class="btn btn-outline-dark"
+            </div>
+            <div id="project2" class="ex-project">
+              <div id="project2-cover"></div>
+              <span id="project2-text">MyWeb</span>
+              <a id="project2-link" href="./index.html" target="_blank"
+                ><button
+                  type="button"
+                  id="project2-btn"
+                  class="btn btn-outline-dark"
+                >
+                  GO > >
+                </button></a
               >
-                GO > >
-              </button></a
-            >
+            </div>
+            <div id="project3" class="ex-project">
+              <div id="project3-cover"></div>
+              <span id="project3-text">Comming soon</span>
+              <a id="project3-link" href="#project"
+                ><button
+                  type="button"
+                  id="project3-btn"
+                  class="btn btn-outline-dark"
+                >
+                  GO > >
+                </button></a
+              >
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <div class="trapezoid"></div>
-      <div class="contact-title">
-        <span class="contact-c">C O N T A C T</span
-        ><span class="contact-m">M E</span>
-      </div>
-      <div class="contact-frame">
-        <div class="contact-info">
-          <i class="fas fa-map-marker-alt"></i> New Taipei City 220, Taiwan
+    <section id="contact" data-anchor="contact">
+      <div class="section-blank"></div>
+      <div class="cintact-block">
+        <div class="trapezoid"></div>
+        <div class="contact-title">
+          <span class="contact-c">C O N T A C T</span
+          ><span class="contact-m">M E</span>
         </div>
-        <div class="contact-info">
-          <i class="fas fa-phone"></i> +886 987 058 069
+        <div class="contact-frame">
+          <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i> New Taipei City 220, Taiwan
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-phone"></i> +886 987 058 069
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-envelope"></i> b06501012@gmail.com
+          </div>
         </div>
-        <div class="contact-info">
-          <i class="fas fa-envelope"></i> b06501012@gmail.com
+        <div class="contactform">
+          <form id="form" method="POST">
+            <div class="form-group">
+              <label for="username">Your Name</label>
+              <input
+                type="name"
+                class="form-control"
+                id="username"
+                aria-describedby="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="useremail">Your Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="useremail"
+                aria-describedby="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="usersubject">Subject</label>
+              <input
+                type="subject"
+                class="form-control"
+                id="usersubject"
+                aria-describedby="subject"
+              />
+            </div>
+            <div class="form-group">
+              <label for="usermsg">Message</label>
+              <textarea class="form-control" id="usermsg" row="5"></textarea>
+            </div>
+            <button type="submit" id="submit" class="btn btn-dark formBtn">
+              Submit
+            </button>
+          </form>
         </div>
-      </div>
-      <div class="contactform">
-        <form id="form" method="POST">
-          <div class="form-group">
-            <label for="username">Your Name</label>
-            <input
-              type="name"
-              class="form-control"
-              id="username"
-              aria-describedby="name"
-            />
-          </div>
-          <div class="form-group">
-            <label for="useremail">Your Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="useremail"
-              aria-describedby="email"
-            />
-          </div>
-          <div class="form-group">
-            <label for="usersubject">Subject</label>
-            <input
-              type="subject"
-              class="form-control"
-              id="usersubject"
-              aria-describedby="subject"
-            />
-          </div>
-          <div class="form-group">
-            <label for="usermsg">Message</label>
-            <textarea
-              class="form-control"
-              id="usermsg"
-              row="5"
-            ></textarea>
-          </div>
-          <button type="submit" id="submit" class="btn btn-dark formBtn">
-            Submit
-          </button>
-        </form>
       </div>
     </section>
     <footer></footer>
