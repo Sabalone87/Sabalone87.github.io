@@ -389,20 +389,20 @@ a.nav-link:hover span::before {
 }
 @media only screen and (max-width: 1400px) and (min-width: 450px) {
   #about {
-    height: 500px;
+    height: 400px;
   }
   .about-title {
     font-size: 4rem;
     font-weight: bold;
     position: relative;
-    left: 60px;
+    left: 0px;
   }
   .about-text {
     border: solid 1px black;
     width: 450px;
     height: 200px;
     position: relative;
-    left: 60px;
+    left: 0px;
   }
   .picrun {
     display: flex;
@@ -418,13 +418,13 @@ a.nav-link:hover span::before {
     height: 15px;
     width: 350px;
     position: relative;
-    left: 260px;
+    left: 200px;
   }
   .carousel {
     width: 600px;
     height: 350px;
     position: absolute;
-    left: 610px;
+    left: 550px;
     top: -260px;
   }
   .carousel-indicators {
@@ -679,7 +679,7 @@ a.nav-link:hover span::before {
 }
 @media only screen and (max-width: 1400px) and (min-width: 450px) {
   #project {
-    height: 700px;
+    height: 500px;
     display: flex;
     flex-direction: column;
   }
@@ -696,6 +696,7 @@ a.nav-link:hover span::before {
   .project-block {
     display: flex;
     flex-direction: row;
+    height: 400px;
   }
   #htmlcss {
     background-image: url(./img/htmlcss.png);
@@ -1093,7 +1094,7 @@ a.nav-link:hover span::before {
     width: 500px;
     position: absolute;
     top: 10%;
-    right: 50px;
+    right: 10%;
   }
   .form-group {
     padding: 10px 0;
@@ -1161,7 +1162,7 @@ a.nav-link:hover span::before {
   }
   .contactform {
     margin-top: 100px;
-    width: 500px;
+    width: 450px;
   }
   .form-group {
     padding: 10px 0;
