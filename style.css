@@ -322,7 +322,7 @@ a.nav-link:hover span::before {
 }
 @media screen and (max-width: 450px) {
   #home {
-    height: 250px;
+    height: 300px;
   }
   .contact-bar {
     display: flex;
@@ -402,8 +402,7 @@ a.nav-link:hover span::before {
     border-radius: 0px;
     border: solid 2.5px black;
     padding: 0px;
-    font-size: 0.5rem;
-    left: 2px;
+    font-size: 10px;
   }
   #home-con {
     position: relative;
@@ -1130,7 +1129,7 @@ a.nav-link:hover span::before {
 }
 
 /* contact */
- {
+@media screen and (min-width: 1600px) {
   #contact {
     height: 800px;
     position: relative;
