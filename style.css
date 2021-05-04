@@ -326,7 +326,7 @@ a.nav-link:hover span::before {
     border-radius: 0px;
     border: solid 2.5px black;
     padding: 0px;
-    font-size: 1px;
+    font-size: 5px;
     left: 2px;
   }
 }
