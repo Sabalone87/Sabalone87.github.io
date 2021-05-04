@@ -1,5 +1,5 @@
 // wow
-let aboutTop = $(".about-title").offset().top - 300;
+let aboutTop = $(".about-title").offset().top - 400;
 wow = new WOW({
   boxClass: "wow", // default
   animateClass: "animated", // default
