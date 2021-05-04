@@ -57,7 +57,7 @@ $(".fa-line").on("click", function () {
 $("#htmlcss").on("click", function () {
   $("#nav-tag").text("HTML / CSS / JAVASCRIPT");
   $("#project1").css("background-image", "url(./img/musicPlayer.png)");
-  $("#project2").css("background-image", "url(./img/musicPlayer.png)");
+  $("#project2").css("background-image", "url(./img/myWeb.jpg)");
   $("#project3").css("background-image", "url(./img/comming.jpg)");
   $("#project1-text").text("MusicPlayer");
   $("#project2-text").text("MyWeb");
