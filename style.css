@@ -22,9 +22,9 @@ a {
 
 nav {
   font-size: 1rem;
-  box-shadow: -5px 0 gray;
   position: relative;
-  height: 60px;
+  height: 55px;
+  box-shadow: 0px 5px 5px black;
 }
 
 .navbar-pos {
@@ -61,12 +61,50 @@ a.nav-link:hover span::before {
   visibility: visible;
   transform: scaleX(1);
 }
+@media only screen and (max-width: 1400px) and (min-width: 450px) {
+  #navbarList {
+    width: 100%;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item {
+    padding: 0px;
+  }
+  .nav-line {
+    padding: 0px;
+  }
+  .navbar-pos {
+    position: static;
+  }
+}
+@media screen and (max-width: 450px) {
+  #navbarList {
+    width: 100%;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item {
+    padding: 0px;
+  }
+  .nav-line {
+    padding: 0px;
+  }
+  .navbar-pos {
+    position: static;
+  }
+}
 
 /* home */
 
 @media screen and (min-width: 1400px) {
   #home {
-    height: 700px;
+    height: 750px;
   }
   .contact-bar {
     display: flex;
@@ -82,9 +120,11 @@ a.nav-link:hover span::before {
     bottom: 50%;
   }
   #mypic {
+    z-index: 2;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    box-shadow: 0px 0px 15px black;
   }
   .zoom-img {
     width: 500px;
@@ -99,7 +139,8 @@ a.nav-link:hover span::before {
     position: absolute;
     bottom: 0;
     right: -230px;
-    background-color: #f8f5f1;
+    background-color: #b6b6b6;
+    z-index: -1;
   }
   .name-about {
     height: 350px;
@@ -147,10 +188,27 @@ a.nav-link:hover span::before {
     border-radius: 0px;
     border: solid 2.5px black;
   }
+  #home-con {
+    position: relative;
+    z-index: -2;
+  }
+  #home {
+    position: relative;
+    z-index: -2;
+  }
+  body {
+    position: relative;
+    z-index: -2;
+  }
 }
 @media only screen and (max-width: 1400px) and (min-width: 450px) {
   #home {
     height: 400px;
+  }
+  #home-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .contact-bar {
     display: flex;
@@ -170,6 +228,8 @@ a.nav-link:hover span::before {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    box-shadow: 0px 0px 15px black;
+    z-index: 10;
   }
   .zoom-img {
     width: 300px;
@@ -183,7 +243,8 @@ a.nav-link:hover span::before {
     position: absolute;
     bottom: 0;
     right: -100px;
-    background-color: #f8f5f1;
+    background-color: #b6b6b6;
+    z-index: -1;
   }
   .name-about {
     height: 200px;
@@ -246,6 +307,18 @@ a.nav-link:hover span::before {
     font-size: 1px;
     right: 1px;
   }
+  #home-con {
+    position: relative;
+    z-index: -2;
+  }
+  #home {
+    position: relative;
+    z-index: -2;
+  }
+  body {
+    position: relative;
+    z-index: -2;
+  }
 }
 @media screen and (max-width: 450px) {
   #home {
@@ -269,6 +342,8 @@ a.nav-link:hover span::before {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    box-shadow: 0px 0px 15px black;
+    z-index: 10;
   }
   .zoom-img {
     width: 200px;
@@ -283,7 +358,8 @@ a.nav-link:hover span::before {
     position: absolute;
     bottom: 0;
     right: -60px;
-    background-color: #f8f5f1;
+    background-color: #b6b6b6;
+    z-index: -1;
   }
   .name-about {
     height: 90px;
@@ -329,6 +405,18 @@ a.nav-link:hover span::before {
     font-size: 0.5rem;
     left: 2px;
   }
+  #home-con {
+    position: relative;
+    z-index: -2;
+  }
+  #home {
+    position: relative;
+    z-index: -2;
+  }
+  body {
+    position: relative;
+    z-index: -2;
+  }
 }
 
 /* about */
@@ -341,9 +429,9 @@ a.nav-link:hover span::before {
     font-weight: bold;
     position: relative;
     left: 240px;
+    color: #dddddd;
   }
   .about-text {
-    border: solid 1px black;
     width: 450px;
     height: 200px;
     position: relative;
@@ -359,7 +447,7 @@ a.nav-link:hover span::before {
     object-fit: contain;
   }
   .deco-bar {
-    background-color: black;
+    background-color: #4c4c4c;
     height: 15px;
     width: 420px;
     position: relative;
@@ -396,9 +484,9 @@ a.nav-link:hover span::before {
     font-weight: bold;
     position: relative;
     left: 0px;
+    color: #dddddd;
   }
   .about-text {
-    border: solid 1px black;
     width: 450px;
     height: 200px;
     position: relative;
@@ -414,7 +502,7 @@ a.nav-link:hover span::before {
     object-fit: contain;
   }
   .deco-bar {
-    background-color: black;
+    background-color: #4c4c4c;
     height: 15px;
     width: 350px;
     position: relative;
@@ -449,9 +537,9 @@ a.nav-link:hover span::before {
     font-size: 3rem;
     font-weight: bold;
     position: relative;
+    color: #dddddd;
   }
   .about-text {
-    border: solid 1px black;
     width: 300px;
     height: 200px;
     position: relative;
@@ -469,7 +557,7 @@ a.nav-link:hover span::before {
     visibility: hidden;
   }
   .deco-bar {
-    background-color: black;
+    background-color: #4c4c4c;
     height: 15px;
     width: 350px;
     position: relative;
@@ -502,7 +590,7 @@ a.nav-link:hover span::before {
 }
 
 /* project */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1024px) {
   #project {
     height: 700px;
     display: flex;
@@ -512,7 +600,7 @@ a.nav-link:hover span::before {
   .type-frame {
     width: 15%;
     height: 600px;
-    background-color: black;
+    background-color: #848484;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -553,7 +641,7 @@ a.nav-link:hover span::before {
   }
 
   .program-control.active div {
-    border: solid 5px red;
+    border: solid 5px black;
   }
   .project-frame {
     width: 80%;
@@ -677,7 +765,7 @@ a.nav-link:hover span::before {
     left: 36%;
   }
 }
-@media only screen and (max-width: 1400px) and (min-width: 450px) {
+@media only screen and (max-width: 1024px) and (min-width: 450px) {
   #project {
     height: 500px;
     display: flex;
@@ -687,7 +775,7 @@ a.nav-link:hover span::before {
   .type-frame {
     width: 20%;
     height: 400px;
-    background-color: black;
+    background-color: #848484;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -729,7 +817,7 @@ a.nav-link:hover span::before {
   }
 
   .program-control.active div {
-    border: solid 5px red;
+    border: solid 5px black;
   }
   .project-frame {
     width: 80%;
@@ -752,13 +840,13 @@ a.nav-link:hover span::before {
 
   .exibition {
     display: flex;
-    width: 80%;
-    height: 400px;
+    width: 100%;
+    height: 500px;
   }
 
   .ex-project {
     margin: 0px 10px;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 60%;
     height: 40%;
     border-radius: 20px;
@@ -859,7 +947,7 @@ a.nav-link:hover span::before {
 }
 @media screen and (max-width: 450px) {
   #project {
-    height: 900px;
+    height: 1200px;
     display: flex;
     flex-direction: column;
   }
@@ -867,7 +955,7 @@ a.nav-link:hover span::before {
   .type-frame {
     width: 100%;
     height: 80px;
-    background-color: black;
+    background-color: #848484;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -909,7 +997,7 @@ a.nav-link:hover span::before {
   }
 
   .program-control.active div {
-    border: solid 3px red;
+    border: solid 3px black;
   }
   .project-frame {
     width: 80%;
@@ -932,14 +1020,15 @@ a.nav-link:hover span::before {
   .exibition {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 600px;
+    align-items: center;
+    width: 350px;
+    height: 850px;
   }
 
   .ex-project {
     margin: 20px 0px;
-    width: 300px;
-    height: 250px;
+    width: 350px;
+    height: 320px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -1038,7 +1127,7 @@ a.nav-link:hover span::before {
 }
 
 /* contact */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1600px) {
   #contact {
     height: 800px;
     position: relative;
@@ -1051,7 +1140,7 @@ a.nav-link:hover span::before {
   }
 
   .trapezoid {
-    background-color: gray;
+    background-color: #dedede;
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
     width: 60%;
     height: 600px;
@@ -1107,7 +1196,7 @@ a.nav-link:hover span::before {
     right: 0px;
   }
 }
-@media only screen and (max-width: 1400px) and (min-width: 450px) {
+@media only screen and (max-width: 1600px) and (min-width: 450px) {
   #contact {
     height: 1200px;
     position: relative;
@@ -1121,7 +1210,7 @@ a.nav-link:hover span::before {
   }
 
   .trapezoid {
-    background-color: gray;
+    background-color: #dedede;
     width: 100%;
     height: 550px;
     z-index: -1;
@@ -1188,7 +1277,7 @@ a.nav-link:hover span::before {
   }
 
   .trapezoid {
-    background-color: gray;
+    background-color: #dedede;
     width: 100%;
     height: 300px;
     z-index: -1;
@@ -1244,7 +1333,7 @@ a.nav-link:hover span::before {
 
 /* footer */
 footer {
-  background-color: gray;
+  background-color: #4c4c4c;
   width: 100%;
   height: 60px;
 }

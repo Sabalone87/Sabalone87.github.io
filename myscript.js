@@ -1,3 +1,14 @@
+// wow
+let aboutTop = $(".about-title").offset().top - 250;
+wow = new WOW({
+  boxClass: "wow", // default
+  animateClass: "animated", // default
+  offset: aboutTop, // default
+  mobile: true, // default
+  live: true, // default
+});
+wow.init();
+
 // ** navbar **
 // item
 $(".nav-line").on("click", function () {

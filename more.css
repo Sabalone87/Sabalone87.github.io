@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background: rgb(245, 245, 245);
+  overscroll-behavior: none;
+}
+
+.title {
+  font-size: 6rem;
+  text-align: center;
+  color: #4c4c4c;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
