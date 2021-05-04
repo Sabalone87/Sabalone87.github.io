@@ -11,10 +11,30 @@ body {
 }
 
 .title {
-  font-size: 6rem;
   text-align: center;
   color: #4c4c4c;
   font-weight: bold;
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width: 1600px) {
+  .title {
+    font-size: 6rem;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 450px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+.small-title {
+  font-size: 1.5rem;
+}
+.text {
+  font-size: 1rem;
 }
