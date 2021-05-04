@@ -947,7 +947,7 @@ a.nav-link:hover span::before {
 }
 @media screen and (max-width: 450px) {
   #project {
-    height: 1200px;
+    height: 1050px;
     display: flex;
     flex-direction: column;
   }
@@ -1022,13 +1022,13 @@ a.nav-link:hover span::before {
     flex-direction: column;
     align-items: center;
     width: 350px;
-    height: 850px;
+    height: 800px;
   }
 
   .ex-project {
     margin: 20px 0px;
     width: 350px;
-    height: 320px;
+    height: 240px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
