@@ -224,7 +224,7 @@ function preload() {
   imgGround = loadImage("./asset/background/ground.png");
   imgCloud = loadImage("./asset/background/cloud.png");
   imgMountoun = loadImage("./asset/background/mountoun.png");
-  gameoverSound = loadSound("./asset/soundtrack/gameover.mov");
+  gameoverSound = new Audio("./asset/soundtrack/gameover.mp3");
 
   // for loop 加載 圖片
   for (let i = 1; i <= 5; i++) {
