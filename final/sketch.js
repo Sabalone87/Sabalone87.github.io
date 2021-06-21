@@ -1,6 +1,6 @@
 // 三個變數分別存取該物件的圖片
 let imgGodTone = [],
-  imgCactus = [],
+  imgHotpot = [],
   imgBird = [];
 
 // 背景圖片
@@ -12,7 +12,7 @@ let groundX = 0,
   cloudX = 0;
 
 // 存障礙物的陣列
-let cactuses = [],
+let hotpots = [],
   birds = [];
 
 // 當前分數和最高分數
@@ -42,7 +42,7 @@ function setup() {
   // 宣告人物和障礙物
   render.parent("render");
   godTone = new GodTone();
-  cactus = new Cactus();
+  hotpot = new Hotpot();
   bird = new Bird();
 }
 
@@ -67,7 +67,7 @@ function addObstacle() {
   if (millis() - lastAddTime > interval) {
     // 若時間能被2 整除 就增加 陸地障礙物 否則就增加空中
     if (int(interval) % 2 == 0) {
-      cactuses.push(new Cactus());
+      hotpots.push(new Hotpot());
     } else {
       birds.push(new Bird());
     }
@@ -132,7 +132,7 @@ function gamePlayScreen() {
   if (frameCount % 6 == 0) index++; //每六個影格換一張圖片 使統神達到會動的效果
 
   // 地面障礙物的移動顯示
-  for (let c of cactuses) {
+  for (let c of hotpots) {
     c.move();
     c.show();
     // 碰撞檢定
@@ -214,7 +214,7 @@ function restart() {
   gameScreen = 1;
   lastAddTime = 0;
   birds = [];
-  cactuses = [];
+  hotpots = [];
   cld = 0;
   score = 0;
 }
@@ -233,8 +233,8 @@ function preload() {
   }
 
   for (let j = 1; j <= 12; j++) {
-    let str2 = "./asset/cactus/cactus" + j + ".png";
-    imgCactus[j] = loadImage(str2);
+    let str2 = "./asset/hotpot/hotpot" + j + ".png";
+    imgHotpot[j] = loadImage(str2);
   }
   for (let k = 1; k <= 2; k++) {
     let str3 = "./asset/bird/bird" + k + ".png";

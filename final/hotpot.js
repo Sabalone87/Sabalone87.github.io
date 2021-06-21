@@ -1,7 +1,7 @@
-class Cactus {
+class Hotpot {
   constructor() {
     // 初始障礙物圖片，隨機不同的障礙物
-    this.img = imgCactus[int(random(1, 12))];
+    this.img = imgHotpot[int(random(1, 12))];
     this.w = this.img.width * 1.5;
     this.h = this.img.height * 1.5;
     //  使橫坐標為畫布寬度 讓障礙物從右邊出現
