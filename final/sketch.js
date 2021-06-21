@@ -228,7 +228,7 @@ function preload() {
 
   // for loop 加載 圖片
   for (let i = 1; i <= 5; i++) {
-    let str1 = "./asset/godTone/godtone" + i + ".png";
+    let str1 = "./asset/godtone/godtone" + i + ".png";
     imgGodTone[i] = loadImage(str1);
   }
 
