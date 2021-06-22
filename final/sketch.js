@@ -83,7 +83,8 @@ function initScreen() {
 
   // 背景圖片
   image(imgGround, 0, height - 20, imgGround.width, imgGround.height);
-  image(imgCloud, 0, 50, imgCloud.width, imgCloud.height);
+  image(imgCloud, 0, 0, imgCloud.width, imgCloud.height);
+  image(imgMountoun, 0, 140, imgMountoun.width, imgMountoun.height);
 
   //每25個影格換一張圖片 使統神達到會動的效果
   if (frameCount % 25 == 0) index++;
@@ -254,12 +255,12 @@ function backGroundPicture() {
   if (cloudX > (-1 * imgCloud.width) / 2) {
     cloudX -= 1;
   } else cloudX = 0;
-  image(imgCloud, cloudX, 50, imgCloud.width, imgCloud.height);
+  image(imgCloud, cloudX, 0, imgCloud.width, imgCloud.height);
 
   if (mountounX > (-1 * imgMountoun.width) / 2) {
     mountounX -= 0.3;
   } else mountX = 0;
-  image(imgMountoun, mountounX, 60, imgMountoun.width, imgMountoun.height);
+  image(imgMountoun, mountounX, 150, imgMountoun.width, imgMountoun.height);
 }
 
 // 空白鍵控制跳躍
