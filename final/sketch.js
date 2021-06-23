@@ -8,7 +8,7 @@ let imgGround, imgMountoun, imgCloud;
 
 // 初始背景圖片的x座標
 let groundX = 0,
-  mountounX = 0,
+  mountX = 0,
   cloudX = 0;
 
 // 存障礙物的陣列
@@ -252,15 +252,15 @@ function backGroundPicture() {
   } else groundX = 0; // 圖片完全離開畫布 就設置為初始位置
   image(imgGround, groundX, height - 20, imgGround.width, imgGround.height);
 
-  if (cloudX > (-1 * imgCloud.width) / 2) {
+  if (cloudX >= (-1 * imgCloud.width) / 2) {
     cloudX -= 1;
   } else cloudX = 0;
   image(imgCloud, cloudX, 50, imgCloud.width, imgCloud.height);
 
-  if (mountounX > (-1 * imgMountoun.width) / 2) {
-    mountounX -= 0.3;
+  if (mountX >= (-1 * imgMountoun.width) / 2) {
+    mountX -= 0.3;
   } else mountX = 0;
-  image(imgMountoun, mountounX, 100, imgMountoun.width, imgMountoun.height);
+  image(imgMountoun, mountX, 100, imgMountoun.width, imgMountoun.height);
 }
 
 // 空白鍵控制跳躍
