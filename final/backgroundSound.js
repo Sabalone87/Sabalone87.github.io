@@ -1,4 +1,5 @@
 let sound = 0;
+$("#backgroundSound")[0].volume = 0.5;
 // 控制背景音 和更改圖片
 $(window).bind("keydown", (e) => {
   if (e.keyCode == 86 && sound === 1) {

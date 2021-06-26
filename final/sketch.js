@@ -4,12 +4,12 @@ let imgGodTone = [],
   imgBird = [];
 
 // 背景圖片
-let imgGround, imgMountoun, imgCloud;
+let imgGround, imgBuilding, imgCrazyDog;
 
 // 初始背景圖片的x座標
 let groundX = 0,
-  mountX = 0,
-  cloudX = 0;
+  buildingX = 0,
+  crazyDogX = 0;
 
 // 存障礙物的陣列
 let hotpots = [],
@@ -23,7 +23,9 @@ let score = 0,
 let lastAddTime = 0;
 
 // 遊戲結束音效
-let gameoverSound;
+let gameoverSound = new Audio("./asset/soundtrack/gameover.mp3");
+
+gameoverSound.volume = 0.3;
 
 // 遊戲介面狀態
 let gameScreen = 0;
@@ -83,8 +85,8 @@ function initScreen() {
 
   // 背景圖片
   image(imgGround, 0, height - 20, imgGround.width, imgGround.height);
-  image(imgCloud, 0, 50, imgCloud.width, imgCloud.height);
-  image(imgMountoun, 0, 100, imgMountoun.width, imgMountoun.height);
+  image(imgCrazyDog, 0, 50, imgCrazyDog.width, imgCrazyDog.height);
+  image(imgBuilding, 0, 100, imgBuilding.width, imgBuilding.height);
 
   //每25個影格換一張圖片 使統神達到會動的效果
   if (frameCount % 25 == 0) index++;
@@ -223,9 +225,8 @@ function restart() {
 // preload各種資源
 function preload() {
   imgGround = loadImage("./asset/background/ground.png");
-  imgCloud = loadImage("./asset/background/cloud.png");
-  imgMountoun = loadImage("./asset/background/mountoun.png");
-  gameoverSound = new Audio("./asset/soundtrack/gameover.mp3");
+  imgCrazyDog = loadImage("./asset/background/crazyDog.png");
+  imgBuilding = loadImage("./asset/background/building.png");
 
   // for loop 加載 圖片
   for (let i = 1; i <= 5; i++) {
@@ -252,15 +253,15 @@ function backGroundPicture() {
   } else groundX = 0; // 圖片完全離開畫布 就設置為初始位置
   image(imgGround, groundX, height - 20, imgGround.width, imgGround.height);
 
-  if (cloudX >= (-1 * imgCloud.width) / 2) {
-    cloudX -= 1;
-  } else cloudX = 0;
-  image(imgCloud, cloudX, 50, imgCloud.width, imgCloud.height);
+  if (crazyDogX >= (-1 * imgCrazyDog.width) / 2) {
+    crazyDogX -= 1;
+  } else crazyDogX = 0;
+  image(imgCrazyDog, crazyDogX, 50, imgCrazyDog.width, imgCrazyDog.height);
 
-  if (mountX >= (-1 * imgMountoun.width) / 2) {
-    mountX -= 0.3;
-  } else mountX = 0;
-  image(imgMountoun, mountX, 100, imgMountoun.width, imgMountoun.height);
+  if (buildingX >= (-1 * imgBuilding.width) / 2) {
+    buildingX -= 0.3;
+  } else buildingX = 0;
+  image(imgBuilding, buildingX, 100, imgBuilding.width, imgBuilding.height);
 }
 
 // 空白鍵控制跳躍

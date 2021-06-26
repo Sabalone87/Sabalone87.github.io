@@ -1,5 +1,5 @@
 let jumpSound = new Audio("./asset/soundtrack/jump.mp3"); // 跳躍音效
-
+jumpSound.volume = 0.1;
 // 定義統神
 class GodTone {
   // 初始化
@@ -24,6 +24,7 @@ class GodTone {
       // 跳得初速度
       this.vy = -18;
     }
+
     jumpSound.play();
   }
 
