@@ -1,5 +1,6 @@
 let jumpSound = new Audio("./asset/soundtrack/jump.mp3"); // 跳躍音效
 jumpSound.volume = 0.1;
+
 // 定義統神
 class GodTone {
   // 初始化
@@ -14,7 +15,7 @@ class GodTone {
     this.y = height - this.h;
     // 垂直速度(跳的高度)
     this.vy = 0;
-    // 重力參數（落下的速度）
+    // 重力參數（落下的速度）s
     this.gravity = 1;
   }
 
@@ -60,6 +61,7 @@ class GodTone {
   // 碰撞檢驗
   hits(obstacle) {
     // 8個參數 分別為兩個物體的座標和寬高（稍為減一點數字使得判定寬一點不要碰到邊就觸發）
+    // 撞到就會return true
     return collideRectRect(
       this.x - 10,
       this.y - 10,

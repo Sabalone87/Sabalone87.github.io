@@ -7,7 +7,8 @@
 
 ## 連結:
 
-http://sabalone87.github.io/final
+網站：http://sabalone87.github.io/final
+影片說明：https://drive.google.com/file/d/1vD60IQLk22VD-K8glmqnxDkqROrrOUDA/view?usp=sharing
 
 ## 遊戲玩法
 

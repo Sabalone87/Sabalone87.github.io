@@ -88,6 +88,7 @@ function initScreen() {
   image(imgCrazyDog, 0, 50, imgCrazyDog.width, imgCrazyDog.height);
   image(imgBuilding, 0, 100, imgBuilding.width, imgBuilding.height);
 
+  //frameCount 顯示從draw執行後被展示的影格數
   //每25個影格換一張圖片 使統神達到會動的效果
   if (frameCount % 25 == 0) index++;
 
@@ -246,11 +247,11 @@ function preload() {
 
 // 循環背景圖片
 function backGroundPicture() {
-  // 如果圖片在畫布上
+  // 如果圖片向左移的幅度未超過圖片的一半
   if (groundX > (-1 * imgGround.width) / 2) {
     // 將圖片向左移動
     groundX -= 8;
-  } else groundX = 0; // 圖片完全離開畫布 就設置為初始位置
+  } else groundX = 0; // 圖片向左移動至一半 就設置為初始位置
   image(imgGround, groundX, height - 20, imgGround.width, imgGround.height);
 
   if (crazyDogX >= (-1 * imgCrazyDog.width) / 2) {
